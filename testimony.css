@@ -1,0 +1,117 @@
+*{
+    padding: 0;
+    margin:0;
+    box-sizing: border-box;
+    font-family: 'Poppins',sans-serif;
+    text-decoration: none;
+    list-style: none;
+    scroll-behavior: smooth;
+}
+
+:root{
+    --main-color: #ef2d24;
+    --text-color: #252429;
+    --bg-color: #fffefb;
+    --rr-color: #ffa50a;
+    --other-color: #95949a;
+    --big-font: 4.4rem;
+    --h2-font:3rem;
+    --p-font:1rem;
+    
+}
+
+body{
+    background: var(--bg-color);
+    color: var(--text-color);
+}
+
+.container{
+    max-width: 1200px;
+    margin: auto;
+    /* padding: 10rem 1rem; */
+    padding: 10rem 1rem 0;
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    gap: 10rem;
+}
+
+.container-left h1{
+    margin-bottom: 2rem;
+    font-family: 'Playfair Display', serif;
+    font-size: var(--big-font);
+    font-weight: 500;
+    color: var(--main-color);
+}
+
+.container-left p{
+    font-family: 'Playfair Display', serif;
+    color: var(--other-color);
+    margin-bottom: 1rem;
+}
+
+.container-right{
+    display: grid;
+    gap: 2rem;
+}
+
+.testimony{
+    padding: 2rem;
+    display: flex;
+    align-items: flex-start;
+    gap: 2rem;
+    background-color: white;
+    border-radius: 1rem;
+    box-shadow: 5px 5px 20px var(--other-color);
+    cursor: pointer;
+}
+
+.testimony img{
+    max-width: 75px;
+    border-radius: 100%;
+}
+
+.content{
+    display: flex;
+    gap: 1rem;
+}
+
+.content span i{
+    font-size: 2rem;
+    color: var(--main-color);
+}
+
+.content-details p{
+    font-family: 'Playfair Display', serif;
+    font-style: italic;
+    color: var(--other-color);
+    margin-bottom: 1rem;
+}
+
+.content-details h4{
+    text-align: right;
+    color:var(--main-color);
+    font-size: 1rem;
+    font-weight: 500;
+}
+
+@media(width < 1200px){
+    .container{
+        gap: 3rem;
+    }
+}
+
+@media (width <900px){
+    .container{
+        grid-template-columns: repeat(1,1fr);
+    }
+    .container-right{
+        grid-template-columns: repeat(2,1fr);
+    }
+}
+
+@media (width < 750px){
+    .container-right{
+        grid-template-columns: repeat(1,1fr);
+    }
+}
+
